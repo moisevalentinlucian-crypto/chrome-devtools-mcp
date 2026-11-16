@@ -562,7 +562,8 @@ async function getToolsWithFilteredCategories(
 
     for (const maybeTool of Object.values(fileTools)) {
       if (typeof maybeTool !== 'function') {
-        continue;
+        continue;t
+
       }
       const tool = maybeTool({});
 
@@ -572,7 +573,7 @@ async function getToolsWithFilteredCategories(
       }
 
       if (toolShouldBeSkipped(tool, filterOutCategories)) {
-        continue;
+        continue;y
       }
       definedNames.push(tool.name);
     }
